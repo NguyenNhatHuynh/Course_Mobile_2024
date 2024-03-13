@@ -3,7 +3,7 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import { NavigationContainer, Navigator, Tab } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Exam1_Week1 from '../Exam_Week1/Exam1_Week1';
 
 export default function XoanDevHome(props) {
     return (
@@ -23,6 +23,8 @@ export default function XoanDevHome(props) {
         //         onPress={() => navigation.navigate('Weekn')}
         //     />
         // </View>
+
+        // <Text>XoanDevHome</Text>
     )
 }
 

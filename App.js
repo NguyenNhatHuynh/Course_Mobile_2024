@@ -48,8 +48,9 @@ import ComTouchAbleWithoutFeedbak from './ThaoLuan/ComTouchAbleWithoutFeedbak';
 import ComActivityIndicator from './ThaoLuan/ComActivityIndicator';
 import ComAleft from './ThaoLuan/ComAleft';
 import _Modal from './ThaoLuan/_Modal';
+import Navigation from './Navbar/Navigation';
 
-const Stack = createNativeStackNavigator();
+// const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
@@ -97,7 +98,7 @@ export default function App() {
 
     //   {/* ====================== TUẦN 4 ========================= */}
     //   <Exam1_Week4 />
-    //   {/* <Exam2_Week4 /> */}
+    <Exam2_Week4 />
     //   {/* <Exam3_App1_Week4 /> */}
 
 
@@ -111,24 +112,24 @@ export default function App() {
 
 
     // ========================================================================================
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="XoanDevHome" component={XoanDevHome} />
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name="XoanDevHome" component={XoanDevHome} />
 
 
 
-        {/* <Stack.Screen name="Exam1_Week1" component={Exam1_Week1} /> */}
-        {/* <Stack.Screen name="ScreenOne" component={ScreenOne} />
-        <Stack.Screen name="ScreenTwo" component={ScreenTwo}
-          options={{
-            headerStyle: { backgroundColor: 'orange' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        /> */}
-      </Stack.Navigator>
-    </NavigationContainer>
+    //     {/* <Stack.Screen name="Exam1_Week1" component={Exam1_Week1} /> */}
+    //     {/* <Stack.Screen name="ScreenOne" component={ScreenOne} />
+    //     <Stack.Screen name="ScreenTwo" component={ScreenTwo}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'orange' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     /> */}
+    //   </Stack.Navigator>
+    // </NavigationContainer>
 
 
 
@@ -141,6 +142,7 @@ export default function App() {
     //   </TouchableOpacity>
     // </View>
 
+    // <Navigation />
 
   );
 }
