@@ -1,0 +1,94 @@
+import { useState } from 'react'
+import { Text, StyleSheet, View } from 'react-native'
+import React from 'react-native'
+import { TouchableOpacity } from 'react-native'
+import { FlatList } from 'react-native'
+
+let App3_LevelUp = () => {
+    const [mangSo, setMangSo] = useState([]);
+
+    const soNgauNhien = () => {
+        return Math.floor(Math.random() * 100).toString();
+    }
+
+    console.log(mangSo);
+    return (
+        <View style={styles.container1}>
+
+            <TouchableOpacity style={styles.btn} onPress={() =>
+                setMangSo([...mangSo, soNgauNhien()])
+            }>
+                <Text style={styles.text1}>Thêm Số</Text>
+            </TouchableOpacity>
+
+
+            {/* <TouchableOpacity style={styles.btn1} onPress={
+                // handleRemoveItem(Math.floor(Math.random() * mangSo.length))
+                setMangSo([...mangSo, handleRemoveItem()])
+            }>
+                <Text style={styles.text1}>Xóa Số</Text>
+            </TouchableOpacity> */}
+
+            <FlatList
+                data={mangSo}
+                renderItem={({ item }) =>
+                    <View style={styles.card}>
+                        <Text style={styles.text}>{item}</Text>
+                    </View>
+                }
+                keyExtractor={item => item}
+            />
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+
+    container1: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    btn: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20,
+        height: 60,
+        width: 150,
+        backgroundColor: '#0057D8',
+        borderWidth: 2,
+    },
+    btn1: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 20,
+        height: 60,
+        width: 150,
+        backgroundColor: 'red',
+        borderWidth: 2,
+    },
+    text1: {
+        fontSize: 25,
+        color: 'white'
+    },
+    card: {
+        marginVertical: 10,
+        borderWidth: 2,
+        borderColor: 'black',
+        height: 55,
+        width: 350,
+        borderRadius: 10,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    text: {
+        fontSize: 20
+    }
+
+})
+
+
+export default App3_LevelUp;

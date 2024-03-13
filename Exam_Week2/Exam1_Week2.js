@@ -16,7 +16,7 @@ export default function Exam1_Week2() {
     let ketqua = tinhSoMu(4, 4);
 
     console.log(`Kết quả của a^2 + b^2 là ${ketqua}`);
-    
+
     return (
         <View style={styles.container}>
 

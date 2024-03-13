@@ -1,13 +1,48 @@
-import { StatusBar } from 'expo-status-bar';
+
+BAI 3 TUAN 2 
+
+//========================================
+
+  // const loaiLu = (data) => {
+    //     data.forEach(e => {
+    //         e.loai;
+    //     });
+    // }
+
+
+    // const checkLoaiBook = (array) => {
+    //     array.forEach(element => {
+    //         console.log(element.loai);
+    //     });
+    // }
+
+    function check(array) {
+        array.forEach(element => {
+            console.log(element.loai);
+        });
+    };
+
+    let useFilter = data.filter(
+        check(daa)
+    );
+    // console.log(data[1].loai);
+    console.log(checkLoaiBook(data));
+
+
+
+//========================================
+
+
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Exam2_Week1() {
+export default function Exam4_Week2() {
+
     return (
         <View style={styles.container}>
 
-
-            {/* BAI TAP 2 TUAN 1 */}
+            {/* BAI TAP 4 TUAN 2 */}
 
             <View style={styles.do}>
                 <Text style={styles.text}>Đỏ</Text>
@@ -39,8 +74,6 @@ export default function Exam2_Week1() {
                 <Text style={styles.text}>Tím</Text>
             </View>
 
-
-
         </View>
     );
 }
@@ -48,68 +81,57 @@ export default function Exam2_Week1() {
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
-        justifyContent: 'center',
+        // flex: 1,
         flexDirection: 'column',
     },
-
-
-
 
 
     // BAI TAP 2 TUAN 1
 
     do: {
+
         backgroundColor: 'red',
-        width: 'auto',
-        height: 100,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     cam: {
         backgroundColor: 'orange',
-        width: 'auto',
-        height: 100,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     vang: {
         backgroundColor: 'yellow',
-        width: 'auto',
-        height: 100,
+        flex: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     luc: {
         backgroundColor: '#008000',
-        width: 'auto',
-        height: 100,
+        flex: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     lam: {
         backgroundColor: '#0000ff',
-        width: 'auto',
-        height: 100,
+        flex: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     cham: {
         backgroundColor: '#4a0082',
-        width: 'auto',
-        height: 100,
+        flex: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
     },
     tim: {
         backgroundColor: '#800080',
-        width: 'auto',
-        height: 100,
+        flex: 1,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
@@ -117,5 +139,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 40,
     },
+
+
 
 });
