@@ -25,5 +25,8 @@
 - Exam 4 (Success)
 
 ====== EXAM OF WEEK 4 ======
-
+- Exam 1 (Success)
+- Exam 2 (Success)
+- Exam 3 (Sucess)
+- Exam 4 (Unfinished)
 ###

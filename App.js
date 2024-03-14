@@ -97,15 +97,15 @@ export default function App() {
 
 
     //   {/* ====================== TUẦN 4 ========================= */}
-    //   <Exam1_Week4 />
-    <Exam2_Week4 />
-    //   {/* <Exam3_App1_Week4 /> */}
+    // <Exam1_Week4 />
+    // <Exam2_Week4 />
+    <Exam3_App1_Week4 />
 
 
 
 
     //   {/* ====================== TUẦN 5 ========================= */}
-    //   {/* <Exam1_Week5 /> */}
+    // <Exam1_Week5 />
     //   {/* <Exam2_Week5 /> */}
     //   {/*Chua Duoc*/}
 

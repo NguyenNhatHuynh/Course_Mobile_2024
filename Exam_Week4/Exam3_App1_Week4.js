@@ -6,8 +6,8 @@ import { useState } from 'react'
 let Exam3_App1_Week4 = () => {
     return (
         <View>
-            {/* <App1 /> */}
-            <App2 />
+            <App1 />
+            {/* <App2 /> */}
         </View>
     )
 }
