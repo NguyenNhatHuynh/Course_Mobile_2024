@@ -13,8 +13,6 @@ export default function Exam1_Week1() {
             <Text style={styles.text3}>Lớp: 21DTH3</Text>
 
 
-
-
             {/* Thành Viên 2 */}
             <Text style={styles.text}>Họ và tên: Panyasak Khamkeuth</Text>
             <Text style={styles.text1}>MSSV: 1721001086</Text>

@@ -4,9 +4,11 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { TouchableOpacity } from 'react-native'
+
 import Exam1_Week1 from './Exam_Week1/Exam1_Week1';
 import Exam2_Week1 from './Exam_Week1/Exam2_Week1';
 import Exam3_Week1 from './Exam_Week1/Exam3_Week1';
+import HomeWeek1 from './Exam_Week1/HomeWeek1';
 
 import Exam1_Week2 from './Exam_Week2/Exam1_Week2';
 import Exam2_Week2 from './Exam_Week2/Exam2_Week2';
@@ -39,7 +41,6 @@ import ScreenOne from './Exam_Week5/ScreenOne'
 import ScreenTwo from './Exam_Week5/ScreenTwo'
 
 
-import Week1 from './Exam_Week1/Week1';
 import XoanDevHome from './All_Week/XoanDevHome';
 
 
@@ -50,102 +51,57 @@ import ComAleft from './ThaoLuan/ComAleft';
 import _Modal from './ThaoLuan/_Modal';
 import Navigation from './Navbar/Navigation';
 
-// const Stack = createNativeStackNavigator();
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name='XoanDevHome' component={XoanDevHome} />
 
-    // <ComActivityIndicator />
-    // <_Modal />
-    // <ComSectionList />
-    // <ComTouchAbleWithoutFeedbak />
-    // <ComAleft />
-
-    // <View style={styles.container}>
-
-    //   {/* ====================== TUẦN 1 ========================= */}
-    // <Exam1_Week1 />
-    //   {/* <Exam2_Week1 /> */}
-    //   {/* <Exam3_Week1 /> */}
-
-
-
-
-    //   {/* ====================== TUẦN 2 ========================= */}
-    //   {/* <Exam1_Week2 /> */}
-    //   {/* <Exam2_Week2 /> */}
-    //   {/* <Exam4_Week2 /> */}
-
-
-    //   {/* <Exam3_Week2 /> */}
-    //   {/* <Exam5_Week2 /> */}
-
-
-    //   {/* <Exam6_Week2 /> */}
-    //   {/* <Exam7_Week2 /> */}
-
-
-    //   {/* ====================== TUẦN 3 ========================= */}
-    // <Exam1_Week3 />
-    // <Exam3_Week3 />
-    // <Exam4_Week3 />
-
-    // <DenDo />
-    // <DenVang />
-    // <DenXanh />
+        <Stack.Screen name="HomeWeek1" component={HomeWeek1}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="Exam1_Week1" component={Exam1_Week1}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="Exam2_Week1" component={Exam2_Week1}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="Exam3_Week1" component={Exam3_Week1}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
 
 
-
-    //   {/* ====================== TUẦN 4 ========================= */}
-    // <Exam1_Week4 />
-    // <Exam2_Week4 />
-    <Exam3_App1_Week4 />
-
-
-
-
-    //   {/* ====================== TUẦN 5 ========================= */}
-    // <Exam1_Week5 />
-    //   {/* <Exam2_Week5 /> */}
-    //   {/*Chua Duoc*/}
-
-
-
-    // ========================================================================================
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     <Stack.Screen name="XoanDevHome" component={XoanDevHome} />
-
-
-
-    //     {/* <Stack.Screen name="Exam1_Week1" component={Exam1_Week1} /> */}
-    //     {/* <Stack.Screen name="ScreenOne" component={ScreenOne} />
-    //     <Stack.Screen name="ScreenTwo" component={ScreenTwo}
-    //       options={{
-    //         headerStyle: { backgroundColor: 'orange' },
-    //         headerTitleStyle: { fontWeight: 'bold' },
-    //         headerTintColor: 'white',
-    //         headerTitleAlign: 'center'
-    //       }}
-    //     /> */}
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-
-
-
-    // <View style={styles.container}>
-    //   <TouchableOpacity onPress={() => props.navigation.navigate()} style={styles.btn}>
-    //     <Text style={styles.txt}>Bài Tập Tuần 1</Text>
-    //   </TouchableOpacity>
-    //   <TouchableOpacity onPress={() => navigation.navigate('Week2')} style={styles.btn}>
-    //     <Text style={styles.txt}>Bài Tập Tuần 2</Text>
-    //   </TouchableOpacity>
-    // </View>
-
-    // <Navigation />
+      </Stack.Navigator>
+    </NavigationContainer>
 
   );
 }
+
+
+
 
 const styles = StyleSheet.create({
   container: {

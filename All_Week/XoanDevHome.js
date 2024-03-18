@@ -1,30 +1,16 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
-import { TouchableOpacity } from 'react-native'
-import { NavigationContainer, Navigator, Tab } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Exam1_Week1 from '../Exam_Week1/Exam1_Week1';
 
 export default function XoanDevHome(props) {
     return (
-        <View style={styles.container}>
-            <TouchableOpacity onPress={() => props.navigation.navigate('Weekn', { screen: 'Weekn' })} style={styles.btn}>
-                <Text style={styles.txt}>Bài Tập Tuần 1</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => props.navigation.navigate('Week2')} style={styles.btn}>
-                <Text style={styles.txt}>Bài Tập Tuần 2</Text>
-            </TouchableOpacity>
+        <View>
+            <Button title='Tất Cả Bài Tập Tuần 1' onPress={() => props.navigation.navigate('HomeWeek1')} />
+            <Button title='Tất Cả Bài Tập Tuần 2' onPress={() => props.navigation.navigate('HomeWeek2')} />
+            <Button title='Tất Cả Bài Tập Tuần 3' onPress={() => props.navigation.navigate('HomeWeek3')} />
+            <Button title='Tất Cả Bài Tập Tuần 4' onPress={() => props.navigation.navigate('HomeWeek4')} />
+            <Button title='Tất Cả Bài Tập Tuần 4' onPress={() => props.navigation.navigate('HomeWeek4')} />
+
         </View>
-
-        // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        //     <Text>Home Screen</Text>
-        //     <Button
-        //         title="Go to Details"
-        //         onPress={() => navigation.navigate('Weekn')}
-        //     />
-        // </View>
-
-        // <Text>XoanDevHome</Text>
     )
 }
 
@@ -42,7 +28,7 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginVertical: 8
+        marginVertical: 8,
     },
     txt: {
         fontSize: 20,
