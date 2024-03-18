@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native';
 
-export default function HomeWeek1(props) {
+export default function HomeWeek2(props) {
     return (
         <View>
             <Button title='Bài Tập 1' onPress={() => props.navigation.navigate('Exam1_Week2')} />

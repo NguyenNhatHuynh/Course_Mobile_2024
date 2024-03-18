@@ -8,8 +8,7 @@ export default function XoanDevHome(props) {
             <Button title='Tất Cả Bài Tập Tuần 2' onPress={() => props.navigation.navigate('HomeWeek2')} />
             <Button title='Tất Cả Bài Tập Tuần 3' onPress={() => props.navigation.navigate('HomeWeek3')} />
             <Button title='Tất Cả Bài Tập Tuần 4' onPress={() => props.navigation.navigate('HomeWeek4')} />
-            <Button title='Tất Cả Bài Tập Tuần 4' onPress={() => props.navigation.navigate('HomeWeek4')} />
-
+            <Button title='Tất Cả Bài Tập Tuần 5' onPress={() => props.navigation.navigate('HomeWeek5')} />
         </View>
     )
 }
