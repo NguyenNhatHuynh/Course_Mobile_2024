@@ -1,26 +1,66 @@
 import React, { useState } from 'react'
 import { StyleSheet, Text, View, Button, TouchableOpacity, FlatList } from 'react-native';
 
+const soNgauNhien = () => Math.floor(Math.random() * 100).toString();
+
+
+
 export default function Exam1_Week5() {
-    const soNgauNhien = () => {
-        Math.floor(Math.random() * 100).toString();
-    }
+
+
     const [mangSo, setMangSo] = useState([]);
-    console.log(mangSo);
+
+    const themSoNgauNhien = () => {
+        const newNumber = soNgauNhien();
+        setMangSo([...mangSo, newNumber]);
+    };
+
+    const xoaSo = (index) => {
+        const newNumbers = [...mangSo];
+        newNumbers.splice(index, 1);
+        setMangSo(newNumbers);
+    };
+
+    const xoaTatCaSo = () => {
+        setMangSo([]);
+    };
     return (
         <View style={{ marginTop: 50, flex: 1 }}>
-            <TouchableOpacity style={styles.btn} onPress={() => {
+            {/* Cach 1 */}
+            {/* Button Add Number */}
+            {/* <TouchableOpacity style={styles.btn} onPress={() => {
                 setMangSo([...mangSo, soNgauNhien()]);
             }}>
                 <Text style={{ fontSize: 20, color: 'white' }}>Add Number</Text>
+            </TouchableOpacity> */}
+
+
+            {/* Button Remove Number */}
+            {/* <TouchableOpacity style={styles.btn} onPress={() => {
+                setMangSo([...mangSo, soNgauNhien()]);
+            }}>
+                <Text style={{ fontSize: 20, color: 'white' }}>Add Number</Text>
+            </TouchableOpacity> */}
+
+            {/* Cach 2: Button Add Number */}
+            <TouchableOpacity style={styles.btn} onPress={() => { themSoNgauNhien() }}>
+                <Text style={{ fontSize: 20, color: 'white' }}>Add Number</Text>
             </TouchableOpacity>
+            {/* Button Remove All Number */}
+            <TouchableOpacity style={styles.btn1} onPress={() => { xoaTatCaSo() }}>
+                <Text style={{ fontSize: 20, color: 'white' }}>Remove All Number</Text>
+            </TouchableOpacity>
+
+
             <FlatList
                 data={mangSo}
                 renderItem={({ item }) =>
                     <View style={styles.card}>
-                        <Text style={styles.text}>{item}</Text>
+                        <Text style={{ color: 'black', fontSize: 20 }}>{item}</Text>
+                        <TouchableOpacity style={styles.btn2} onPress={() => { xoaSo() }}>
+                            <Text style={{ fontSize: 20, color: 'black' }}>X</Text>
+                        </TouchableOpacity>
                     </View>}
-                keyExtractor={item => item}
             />
 
         </View>
@@ -50,6 +90,32 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginHorizontal: 100,
     },
+    btn1: {
+        width: 200,
+        height: 50,
+        borderColor: 'black',
+        borderWidth: 1,
+        backgroundColor: 'red',
+        borderRadius: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: 100,
+        marginVertical: 20
+    },
+    btn2: {
+        width: 30,
+        height: 30,
+        borderColor: 'black',
+        borderWidth: 1,
+        backgroundColor: 'yellow',
+        borderRadius: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
     card: {
         width: 280,
         height: 50,
@@ -61,6 +127,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
 
         display: 'flex',
+        justifyContent: 'center',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center'
