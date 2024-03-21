@@ -44,6 +44,7 @@ import ScreenOne from './Exam_Week5/ScreenOne'
 import ScreenTwo from './Exam_Week5/ScreenTwo'
 import Exam1_Week5 from './Exam_Week5/Exam1_Week5';
 import Exam2_Week5 from './Exam_Week5/Exam2_Week5';
+import Exam3_Week5 from './Exam_Week5/Exam3_Week5';
 import HomeWeek5 from './Exam_Week5/HomeWeek5';
 
 import XoanDevHome from './All_Week/XoanDevHome';
@@ -272,6 +273,38 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Exam2_Week5" component={Exam2_Week5}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="Exam3_Week5" component={Exam3_Week5}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="ScreenHome" component={HomeScreen}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="ScreenOne" component={ScreenOne}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="ScreenTwo" component={ScreenTwo}
           options={{
             headerStyle: { backgroundColor: 'grey' },
             headerTitleStyle: { fontWeight: 'bold' },

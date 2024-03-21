@@ -33,3 +33,6 @@
 
 ====== EXAM OF WEEK 5 ======
 ###
+- Exam 1 (Success)
+- Exam 2 (Success)
+- Exam 3 (Unfinished)

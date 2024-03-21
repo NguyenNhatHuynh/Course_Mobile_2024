@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen(props) {
     return (
@@ -11,7 +12,6 @@ export default function HomeScreen(props) {
             <TouchableOpacity onPress={() => props.navigation.navigate('ScreenTwo')} style={styles.btn}>
                 <Text style={styles.txt}>Screen Two</Text>
             </TouchableOpacity>
-
         </View>
     )
 }
