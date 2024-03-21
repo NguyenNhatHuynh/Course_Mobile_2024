@@ -57,6 +57,9 @@ export default function Exam1_Week5() {
                 renderItem={({ item }) =>
                     <View style={styles.card}>
                         <Text style={{ color: 'black', fontSize: 20, marginHorizontal: 120, marginVertical: 8 }}>{item}</Text>
+                        <TouchableOpacity style={styles.btn2} onPress={() => { xoaSo() }}>
+                            <Text style={{ fontSize: 20, color: 'white' }}>X</Text>
+                        </TouchableOpacity>
                     </View>}
             />
 

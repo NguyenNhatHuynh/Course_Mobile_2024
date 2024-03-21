@@ -2,71 +2,71 @@ import React, { useState } from 'react'
 import { StyleSheet, TextInput, Text, View, Button, TouchableOpacity, FlatList } from 'react-native';
 
 
-export default function Exam2_Week5() {
+const Exam2_Week5 = () => {
+    const [food, setFood] = useState('');
+    const [listFoods, setListFood] = useState([]);
 
-    const [textString, setMangFood] = useState([]);
+    const addFood = () => {
+        setListFood([...listFoods, food]);
+        setFood('');
+    };
+
     return (
-        <View style={{ marginTop: 50, flex: 1 }}>
-
-            <View style={{ display: 'flex' }}>
-                <TextInput style={styles.input} />
-                <TextInput style={styles.input} />
-                <TouchableOpacity style={styles.btn} onPress={() => {
-                    setMangFood([...textString, setMangFood()]);
-                }}>
-                    <Text style={{ fontSize: 20, color: 'white' }}>+</Text>
-                </TouchableOpacity>
-            </View>
-            <FlatList
-                data={textString}
-                renderItem={({ item }) =>
-                    <View style={styles.card}>
-                        <Text style={styles.text}>{item}</Text>
-                    </View>}
-                keyExtractor={item => item}
+        <View style={styles.container}>
+            <TextInput
+                style={styles.input}
+                onChangeText={(text) => setFood(text)}
+                value={food}
             />
-
+            <TouchableOpacity style={styles.btn} onPress={() => { addFood() }}>
+                <Text style={{ fontSize: 20, color: 'white' }}>Add Food</Text>
+            </TouchableOpacity>
+            <View style={styles.list}>
+                {listFoods.map((fooditem) => (
+                    <Text key={fooditem} style={styles.item}>{fooditem}</Text>
+                ))}
+            </View>
         </View>
-    )
-}
-
-
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 50,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
+        flex: 1,
+        padding: 20,
+    },
+    input: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        padding: 10,
+    },
+    list: {
+        marginTop: 20,
+    },
+    item: {
+        fontSize: 18,
+        padding: 10,
+        backgroundColor: '#f5f5f5',
+        borderRadius: 5,
+        margin: 5,
     },
     btn: {
-        width: 60,
-        height: 60,
-        borderColor: 'green',
+        width: 200,
+        height: 50,
+        borderColor: 'black',
         borderWidth: 1,
-        backgroundColor: 'blue',
+        backgroundColor: 'green',
         borderRadius: 10,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginHorizontal: 85,
+        marginVertical: 20
 
-
-        marginHorizontal: 285,
-        marginVertical: -65
     },
-    text: {
-        fontSize: 20
-    },
-    input: {
-        height: 50,
-        width: 240,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-        borderColor: 'green'
-    }
-
 });
+
+export default Exam2_Week5;
 
