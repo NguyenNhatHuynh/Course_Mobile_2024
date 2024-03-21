@@ -43,6 +43,7 @@ import HomeScreen from './Exam_Week5/HomeScreen';
 import ScreenOne from './Exam_Week5/ScreenOne'
 import ScreenTwo from './Exam_Week5/ScreenTwo'
 import Exam1_Week5 from './Exam_Week5/Exam1_Week5';
+import Exam2_Week5 from './Exam_Week5/Exam2_Week5';
 import HomeWeek5 from './Exam_Week5/HomeWeek5';
 
 import XoanDevHome from './All_Week/XoanDevHome';
@@ -263,6 +264,14 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Exam1_Week5" component={Exam1_Week5}
+          options={{
+            headerStyle: { backgroundColor: 'grey' },
+            headerTitleStyle: { fontWeight: 'bold' },
+            headerTintColor: 'white',
+            headerTitleAlign: 'center'
+          }}
+        />
+        <Stack.Screen name="Exam2_Week5" component={Exam2_Week5}
           options={{
             headerStyle: { backgroundColor: 'grey' },
             headerTitleStyle: { fontWeight: 'bold' },

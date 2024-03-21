@@ -1,21 +1,24 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, View, Button, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, TextInput, Text, View, Button, TouchableOpacity, FlatList } from 'react-native';
+
 
 export default function Exam2_Week5() {
-    const soNgauNhien = () => {
-        Math.floor(Math.random() * 100).toString();
-    }
-    const [mangSo, setMangSo] = useState([]);
-    console.log(mangSo);
+
+    const [textString, setMangFood] = useState([]);
     return (
         <View style={{ marginTop: 50, flex: 1 }}>
-            <TouchableOpacity style={styles.btn} onPress={() => {
-                setMangSo([...mangSo, soNgauNhien()]);
-            }}>
-                <Text style={{ fontSize: 20, color: 'white' }}>Add Number</Text>
-            </TouchableOpacity>
+
+            <View style={{ display: 'flex' }}>
+                <TextInput style={styles.input} />
+                <TextInput style={styles.input} />
+                <TouchableOpacity style={styles.btn} onPress={() => {
+                    setMangFood([...textString, setMangFood()]);
+                }}>
+                    <Text style={{ fontSize: 20, color: 'white' }}>+</Text>
+                </TouchableOpacity>
+            </View>
             <FlatList
-                data={mangSo}
+                data={textString}
                 renderItem={({ item }) =>
                     <View style={styles.card}>
                         <Text style={styles.text}>{item}</Text>
@@ -38,35 +41,32 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     btn: {
-        width: 200,
-        height: 50,
-        borderColor: 'black',
+        width: 60,
+        height: 60,
+        borderColor: 'green',
         borderWidth: 1,
-        backgroundColor: 'green',
+        backgroundColor: 'blue',
         borderRadius: 10,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        marginHorizontal: 100,
-    },
-    card: {
-        width: 280,
-        height: 50,
-        borderColor: 'black',
-        borderWidth: 1,
-        marginBottom: 10,
-        marginHorizontal: 60,
-        marginVertical: 30,
-        borderRadius: 10,
 
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
+
+        marginHorizontal: 285,
+        marginVertical: -65
     },
     text: {
         fontSize: 20
+    },
+    input: {
+        height: 50,
+        width: 240,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
+        borderColor: 'green'
     }
+
 });
 

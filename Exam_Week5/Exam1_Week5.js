@@ -56,10 +56,7 @@ export default function Exam1_Week5() {
                 data={mangSo}
                 renderItem={({ item }) =>
                     <View style={styles.card}>
-                        <Text style={{ color: 'black', fontSize: 20 }}>{item}</Text>
-                        <TouchableOpacity style={styles.btn2} onPress={() => { xoaSo() }}>
-                            <Text style={{ fontSize: 20, color: 'black' }}>X</Text>
-                        </TouchableOpacity>
+                        <Text style={{ color: 'black', fontSize: 20, marginHorizontal: 120, marginVertical: 8 }}>{item}</Text>
                     </View>}
             />
 
@@ -115,6 +112,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginHorizontal: 245,
+        marginVertical: -34
     },
     card: {
         width: 280,
@@ -126,11 +125,6 @@ const styles = StyleSheet.create({
         marginVertical: 30,
         borderRadius: 10,
 
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center'
     },
     text: {
         fontSize: 20
