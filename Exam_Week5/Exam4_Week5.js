@@ -4,18 +4,11 @@ import HomeScreen from './HomeScreen';
 import ScreenOne from './ScreenOne';
 import ScreenTwo from './ScreenTwo';
 
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-const Tab = createBottomTabNavigator();
 
 export default function Exam4_Week5() {
 
     return (
-        <Tab.Navigator>
-            <Tab.Screen name="HomeScreen" component={HomeScreen} />
-            <Tab.Screen name="ScreenOne" component={ScreenOne} />
-            <Tab.Screen name="ScreenTwo" component={ScreenTwo} />
-        </Tab.Navigator>
+        <HomeScreen />
     )
 }
 

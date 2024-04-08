@@ -45,6 +45,8 @@ import ScreenTwo from './Exam_Week5/ScreenTwo'
 import Exam1_Week5 from './Exam_Week5/Exam1_Week5';
 import Exam2_Week5 from './Exam_Week5/Exam2_Week5';
 import Exam3_Week5 from './Exam_Week5/Exam3_Week5';
+import Exam4_Week5 from './Exam_Week5/Exam4_Week5';
+
 import HomeWeek5 from './Exam_Week5/HomeWeek5';
 
 import XoanDevHome from './All_Week/XoanDevHome';
@@ -56,265 +58,305 @@ import ComActivityIndicator from './ThaoLuan/ComActivityIndicator';
 import ComAleft from './ThaoLuan/ComAleft';
 import _Modal from './ThaoLuan/_Modal';
 import Navigation from './Navbar/Navigation';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 
-const Stack = createNativeStackNavigator();
+
+import { MainStackNavigator } from "./navigation/StackNavigator"
+import BottomTabNavigator from './navigation/TabNavigator';
+import DrawerNavigator from './navigation/DrawerNavigation';
+// const Stack = createNativeStackNavigator();
+// const Tab = createBottomTabNavigator();
+// const Drawer = createDrawerNavigator();
+
+
+
 
 export default function App() {
   return (
+    // 1. Stack Navigation
+    // <NavigationContainer>
+    //   <Stack.Navigator>
+    //     <Stack.Screen name='XoanDevHome' component={XoanDevHome} />
+
+    //     {/* START - ALL EXAM OF WEEK 1 */}
+    //     <Stack.Screen name="HomeWeek1" component={HomeWeek1}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam1_Week1" component={Exam1_Week1}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam2_Week1" component={Exam2_Week1}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam3_Week1" component={Exam3_Week1}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     {/* END - ALL EXAM OF WEEK 1 */}
+
+
+
+    //     {/* START - ALL EXAM OF WEEK 2 */}
+    //     <Stack.Screen name="HomeWeek2" component={HomeWeek2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam1_Week2" component={Exam1_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam2_Week2" component={Exam2_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam3_Week2" component={Exam3_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam4_Week2" component={Exam4_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam5_Week2" component={Exam5_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam6_Week2" component={Exam6_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam7_Week2" component={Exam7_Week2}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+
+
+    //     {/* START - ALL EXAM OF WEEK 3 */}
+    //     <Stack.Screen name="HomeWeek3" component={HomeWeek3}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     {/* <Stack.Screen name="Exam1_Week3" component={Exam1_Week3}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     /> */}
+    //     <Stack.Screen name="Exam3_Week3" component={Exam3_Week3}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam4_Week3" component={Exam4_Week3}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam5_Week3" component={Exam5_Week3}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+
+
+    //     {/* START - ALL EXAM OF WEEK 4 */}
+    //     <Stack.Screen name="HomeWeek4" component={HomeWeek4}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam1_Week4" component={Exam1_Week4}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam2_Week4" component={Exam2_Week4}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam3_App1_Week4" component={Exam3_App1_Week4}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam3_App2_Week4" component={Exam3_App2_Week4}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+
+    //     {/* START - ALL EXAM OF WEEK 5 */}
+    //     <Stack.Screen name="HomeWeek5" component={HomeWeek5}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam1_Week5" component={Exam1_Week5}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam2_Week5" component={Exam2_Week5}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam3_Week5" component={Exam3_Week5}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="ScreenHome" component={HomeScreen}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="ScreenOne" component={ScreenOne}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="ScreenTwo" component={ScreenTwo}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //     <Stack.Screen name="Exam4_Week5" component={Exam4_Week5}
+    //       options={{
+    //         headerStyle: { backgroundColor: 'grey' },
+    //         headerTitleStyle: { fontWeight: 'bold' },
+    //         headerTintColor: 'white',
+    //         headerTitleAlign: 'center'
+    //       }}
+    //     />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name='XoanDevHome' component={XoanDevHome} />
-
-        {/* START - ALL EXAM OF WEEK 1 */}
-        <Stack.Screen name="HomeWeek1" component={HomeWeek1}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam1_Week1" component={Exam1_Week1}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam2_Week1" component={Exam2_Week1}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam3_Week1" component={Exam3_Week1}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        {/* END - ALL EXAM OF WEEK 1 */}
-
-
-
-        {/* START - ALL EXAM OF WEEK 2 */}
-        <Stack.Screen name="HomeWeek2" component={HomeWeek2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam1_Week2" component={Exam1_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam2_Week2" component={Exam2_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam3_Week2" component={Exam3_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam4_Week2" component={Exam4_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam5_Week2" component={Exam5_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam6_Week2" component={Exam6_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam7_Week2" component={Exam7_Week2}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-
-
-        {/* START - ALL EXAM OF WEEK 3 */}
-        <Stack.Screen name="HomeWeek3" component={HomeWeek3}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        {/* <Stack.Screen name="Exam1_Week3" component={Exam1_Week3}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        /> */}
-        <Stack.Screen name="Exam3_Week3" component={Exam3_Week3}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam4_Week3" component={Exam4_Week3}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam5_Week3" component={Exam5_Week3}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-
-
-        {/* START - ALL EXAM OF WEEK 4 */}
-        <Stack.Screen name="HomeWeek4" component={HomeWeek4}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam1_Week4" component={Exam1_Week4}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam2_Week4" component={Exam2_Week4}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam3_App1_Week4" component={Exam3_App1_Week4}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam3_App2_Week4" component={Exam3_App2_Week4}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-
-        {/* START - ALL EXAM OF WEEK 5 */}
-        <Stack.Screen name="HomeWeek5" component={HomeWeek5}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam1_Week5" component={Exam1_Week5}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam2_Week5" component={Exam2_Week5}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="Exam3_Week5" component={Exam3_Week5}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="ScreenHome" component={HomeScreen}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="ScreenOne" component={ScreenOne}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-        <Stack.Screen name="ScreenTwo" component={ScreenTwo}
-          options={{
-            headerStyle: { backgroundColor: 'grey' },
-            headerTitleStyle: { fontWeight: 'bold' },
-            headerTintColor: 'white',
-            headerTitleAlign: 'center'
-          }}
-        />
-      </Stack.Navigator>
+      <DrawerNavigator />
     </NavigationContainer>
+    // 2. Button Navigation
+    // <NavigationContainer>
+    //   <Tab.Navigator>
+    //     <Tab.Screen name="HomeScreen" component={HomeScreen} />
+    //     <Tab.Screen name="ScreenOne" component={ScreenOne} />
+    //     <Tab.Screen name="ScreenTwo" component={ScreenTwo} />
+    //   </Tab.Navigator>
+    // </NavigationContainer>
 
+    // 3. Drawer Navigation
+    // <NavigationContainer>
+    //   <Drawer.Navigator>
+    //     <Drawer.Screen name="HomeScreen" component={HomeScreen} />
+    //     <Drawer.Screen name="ScreenOne" component={ScreenOne} />
+    //     <Drawer.Screen name="ScreenTwo" component={ScreenTwo} />
+    //   </Drawer.Navigator>
+    // </NavigationContainer>
   );
 }
 
