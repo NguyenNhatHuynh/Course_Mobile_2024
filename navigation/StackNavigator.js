@@ -48,6 +48,10 @@ import XoanDevHome from '../All_Week/XoanDevHome';
 import _Modal from '../ThaoLuan/_Modal';
 
 
+
+import { HomeWeek6 } from '../Exam_Week6/HomeWeek6';
+
+
 const Stack = createNativeStackNavigator();
 
 
@@ -303,6 +307,20 @@ export const MainStackNavigator = () => {
                 }}
             />
             <Stack.Screen name="Exam4_Week5" component={Exam4_Week5}
+                options={{
+                    headerStyle: { backgroundColor: 'grey' },
+                    headerTitleStyle: { fontWeight: 'bold' },
+                    headerTintColor: 'white',
+                    headerTitleAlign: 'center'
+                }}
+            />
+
+
+
+
+
+            {/* START - ALL EXAM OF WEEK 6 */}
+            <Stack.Screen name="HomeWeek6" component={HomeWeek6}
                 options={{
                     headerStyle: { backgroundColor: 'grey' },
                     headerTitleStyle: { fontWeight: 'bold' },

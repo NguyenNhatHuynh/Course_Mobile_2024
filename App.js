@@ -340,23 +340,7 @@ export default function App() {
     <NavigationContainer>
       <DrawerNavigator />
     </NavigationContainer>
-    // 2. Button Navigation
-    // <NavigationContainer>
-    //   <Tab.Navigator>
-    //     <Tab.Screen name="HomeScreen" component={HomeScreen} />
-    //     <Tab.Screen name="ScreenOne" component={ScreenOne} />
-    //     <Tab.Screen name="ScreenTwo" component={ScreenTwo} />
-    //   </Tab.Navigator>
-    // </NavigationContainer>
 
-    // 3. Drawer Navigation
-    // <NavigationContainer>
-    //   <Drawer.Navigator>
-    //     <Drawer.Screen name="HomeScreen" component={HomeScreen} />
-    //     <Drawer.Screen name="ScreenOne" component={ScreenOne} />
-    //     <Drawer.Screen name="ScreenTwo" component={ScreenTwo} />
-    //   </Drawer.Navigator>
-    // </NavigationContainer>
   );
 }
 
