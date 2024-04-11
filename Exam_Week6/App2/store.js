@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import mauSlice from './mauSlide';
+import mauSlide from './mauSlide';
 
 const store = configureStore({
     reducer: {
-        mau: mauSlice
+        mau: mauSlide
     }
-})
+});
 
 export default store;

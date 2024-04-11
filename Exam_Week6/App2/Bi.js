@@ -25,6 +25,14 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
 
+    bi: {
+        borderColor: 'black',
+        borderWidth: 2,
+        width: 200,
+        height: 200,
+        borderRadius: 50
+    }
+
 });
 
 

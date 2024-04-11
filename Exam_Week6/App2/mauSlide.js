@@ -1,5 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
-export const mauSlice = createSlice({
+import { createSlice } from '@reduxjs/toolkit';
+
+export const mauSlide = createSlice({
     name: 'mau',
     initialState: {
         value: {
@@ -9,26 +10,34 @@ export const mauSlice = createSlice({
         }
     },
     reducers: {
-        tangDo: state => {
-            state.value.do += 15
+        tang: (state, action) => {
+            state.value += action.payload
         },
-        giamDo: state => {
-            state.value.do -= 15
-        },
-        tangXanhla: state => {
-            state.value.xanhla += 15
-        },
-        giamXanhla: state => {
-            state.value.xanhla -= 15
-        },
-        tangXanhduong: state => {
-            state.value.xanhduong += 15
-        },
-        giamXanhduong: state => {
-            state.value.xanhduong -= 15
+        giam: (state, action) => {
+            state.value -= action.payload
         }
+        // tangDo: state => {
+        //     state.value.do += 15
+        // },
+        // giamDo: state => {
+        //     state.value.do -= 15
+        // },
+        // tangXanhla: state => {
+        //     state.value.xanhla += 15
+        // },
+        // giamXanhla: state => {
+        //     state.value.xanhla -= 15
+        // },
+        // tangXanhduong: state => {
+        //     state.value.xanhduong += 15
+        // },
+        // giamXanhduong: state => {
+        //     state.value.xanhduong -= 15
+        // }
     },
 })
 
-export const { tangDo, giamDo, tangXanhduong, giamXanhduong, tangXanhla, giamXanhla } = mauSlice.actions
-export default mauSlice.reducer;
+// 
+export const { tang, giam } = mauSlide.actions
+// export const { tangDo, giamDo, tangXanhduong, giamXanhduong, tangXanhla, giamXanhla } = mauSlide.actions
+export default mauSlide.reducer;

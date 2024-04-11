@@ -1,16 +1,16 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { tangDo, giamDo, tangXanhduong, giamXanhduong, tangXanhla, giamXanhla } from './mauSlide';
+import store from './store'; // Import Redux store vào component
+// import { tangDo, giamDo, tangXanhduong, giamXanhduong, tangXanhla, giamXanhla } from './mauSlide';
+import { tang, giam } from './mauSlide';
 
 export const NutBam2 = (props) => {
+    const dispatch = useDispatch();
     return (
         <View>
-            <Button title={`Tăng ${props.mau}`} onPress={() => dispatch(tangDo())} />
-            <Button title={`Giảm ${props.mau}`} onPress={() => dispatch(giamDo())} />
-            <Button title={`Tăng ${props.mau}`} onPress={() => dispatch(tangXanhla())} />
-            <Button title={`Giảm ${props.mau}`} onPress={() => dispatch(giamXanhla())} />
-            <Button title={`Tăng ${props.mau}`} onPress={() => dispatch(tangXanhduong())} />
-            <Button title={`Giảm ${props.mau}`} onPress={() => dispatch(giamXanhduong())} />
+            <Button title={`Tăng ${props.mau}`} onPress={() => dispatch(tang())} />
+            <Button title={`Giảm ${props.mau}`} onPress={() => dispatch(giam())} />
         </View>
     )
 }
