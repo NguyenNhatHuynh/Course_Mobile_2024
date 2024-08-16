@@ -1,12 +1,11 @@
 # 👋 Khóa Học Mobile K17 👋
 
 ## 🤝 Mô Tả Kho Lưu Trữ
-<div>
-  <p>🚀 Đây là nơi tổng hợp các bài tập về khóa học Mobile. Năm 2024 khóa K17.</p>
+* 🚀 Đây là nơi tổng hợp các bài tập về khóa học Mobile. Năm 2024 khóa K17
 
-
-<h3> 🛠 Technologies and Tools 🛠  </h3>
+## 🛠 Technologies and Tools 🛠
 <p>🎨 This Course uses the language And Framework, Library [HTML, CSS, JAVASCRIPT, ReactNative, Expo] </p>
+
 <div>
 <span><img src="https://img.shields.io/badge/HTML5-282C34?logo=html5&logoColor=E34F26" alt="HTML5 logo" title="HTML5" height="25" /></span>
 &nbsp;
@@ -30,9 +29,7 @@
 
 <p>🎨Use of virtual machines</p>
 
-<br>
-<h2>Author 👨‍💻 </h2>
-<br>
+## <h2>Author 👨‍💻
 
 I would appreciate if you could give this repository a star 🌟. It would help others to discover this. Thank you for your support 👨‍💻
 
