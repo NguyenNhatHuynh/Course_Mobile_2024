@@ -1,10 +1,9 @@
-<h1> 👋 Khóa Học Mobile K17 👋</h1>
+# 👋 Khóa Học Mobile K17 👋
 
-<h3>🤝 Mô Tả Kho Lưu Trữ </h3>
+## 🤝 Mô Tả Kho Lưu Trữ
 <div>
   <p>🚀 Đây là nơi tổng hợp các bài tập về khóa học Mobile. Năm 2024 khóa K17.</p>
-</div>
-<br>
+
 
 <h3> 🛠 Technologies and Tools 🛠  </h3>
 <p>🎨 This Course uses the language And Framework, Library [HTML, CSS, JAVASCRIPT, ReactNative, Expo] </p>
@@ -34,7 +33,6 @@
 <br>
 <h2>Author 👨‍💻 </h2>
 <br>
-<img src="https://media.licdn.com/dms/image/D5603AQGMVkG7blqgyg/profile-displayphoto-shrink_400_400/0/1676208321738?e=1715817600&v=beta&t=OHMmUlAc-lT6Tyq0vmpxSIZ8O-m2vUWx7XUThFoyWko" alt="Typing SVG" /></a>
 
 I would appreciate if you could give this repository a star 🌟. It would help others to discover this. Thank you for your support 👨‍💻
 
